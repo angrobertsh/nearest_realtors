@@ -1,12 +1,12 @@
-##Realtor Challenge
+## Realtor Challenge
 
 The Realtor Challenge stipulates that one must find the nearest real estate agencies/realtors within 10 miles of one of two addresses, returning a list of realtors sorted by the sum of the distance between both addresses. This implementation uses React/Redux with API calls to Google Places and Google Geocoder to generate this list.
 
-###How to run
+### How to run
 
 Ask Robert for the index.html file and he'll e-mail it to you. Clone the repository, put the index.html file in the home folder of this project, and double click it to open it in Chrome.
 
-###Implementation details
+### Implementation details
 
 React components were made to hold the 2 main display elements, the address form, and the realtor index. These two components depend on the store, accessed through their containers, provided by the provider function in the root, to keep track of when to query the google API, and when to update the store with new address information. An example of the address form container, which dispatches the actions for the API query and to update the address state is as follows:
 
@@ -64,6 +64,6 @@ export const getRealtorsNearLocation = (location, success) => {
 
 Querying and sorting occur for various events. The main interaction, the onSubmit function of the address form, only updates the store with the new address information. This information then cascades down to the components themselves, and when the address form receives new props in the form of the new addresses from the store, it begins the calls to the Google APIs. When the realtor index gets new address props, and new real estate agent information, it performs the sort each time and rerenders its data.
 
-###Possible Improvements
+### Possible Improvements
 
 A stronger implementation of this project would involve local caching to hold old queries and sorts so the Google API wouldn't be queried so often. Caching could also save on space if old sorts were retained as well. Even on this small scale, these 20 entries take a moment to sort themselves and rerender.
