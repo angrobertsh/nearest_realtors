@@ -1,7 +1,9 @@
+var path = require("path");
+
 module.exports = {
   entry: "./frontend/entry.jsx",
   output: {
-    path: "./assets",
+    path: path.join(__dirname, 'assets'),
     filename: "bundle.js",
   },
   module: {
@@ -9,7 +11,7 @@ module.exports = {
       {
         test: [/\.jsx?$/, /\.js?$/],
         exclude: /(node_modules)/,
-        loader: 'babel',
+        loader: 'babel-loader',
         query: {
           presets: ['es2015', 'react']
         }

@@ -1,5 +1,5 @@
 import React from 'react';
-import RealtorIndexItem from './bathroom_index_item';
+import RealtorIndexItem from './realtor_index_item';
 
 class RealtorIndex extends React.Component{
   constructor(props){

@@ -12,7 +12,9 @@ class AddressForm extends React.Component{
   }
 
   update(e){
-    this.setState({e.target.name: e.target.value});
+    let stateUpdate = {};
+    stateUpdate[e.target.name] = e.target.value;
+    this.setState(stateUpdate);
   }
 
   handleSubmit(e){
@@ -33,4 +35,4 @@ class AddressForm extends React.Component{
   }
 }
 
-export default RealtorIndex;
+export default AddressForm;

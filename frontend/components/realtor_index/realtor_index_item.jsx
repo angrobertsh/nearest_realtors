@@ -6,20 +6,19 @@ class RealtorIndexItem extends React.Component {
   }
 
   render(){
-      let realtor = this.props.realtor;
+    let realtor = this.props.realtor;
 
-      return (
-        <div className="realtor">
-          <div className="realtor-name">
+    return (
+      <div className="realtor">
+        <div className="realtor-name">
 
-          </div>
-          <div className="realtor-address">
-
-          </div>
         </div>
-      );
-    }
-  };
+        <div className="realtor-address">
 
+        </div>
+      </div>
+    );
+  }
+};
 
-  export default RealtorIndexItem;
+export default RealtorIndexItem;
