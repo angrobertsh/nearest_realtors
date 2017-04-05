@@ -47,28 +47,76 @@ table {
 	border-spacing: 0;
 }
 
+#root{
+	display: flex;
+	justify-content: center;
+}
+
 .app-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+	width: 75vw;
 }
 
 h1 {
   font-size: 3em;
 }
 
+h3 {
+	font-size: 2em;
+}
+
+h4 {
+	font-size: 1.5em;
+}
+
+h5 {
+	font-size: 1.25em;
+}
+
 #title {
-  padding: 5vh;
+  padding: 3.5vh;
 }
 
 #address-form-container {
-  padding: 2vh;
+  padding: 1vh;
 }
 
 input {
   margin: 1vw;
 }
+
 #realtor-index-container {
-  padding: 3vh;
+  padding: 1.5vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#realtor-index {
+	margin: 2vh;
+}
+
+#realtor-title {
+	padding: 1vh;
+}
+
+.realtor {
+	padding: .5vh;
+	display: flex;
+	justify-content: space-around;
+}
+
+.realtor-distance{
+	width: 25%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: rgba(253, 247, 0, 0.24);
+}
+
+.realtor-info{
+	width: 65%;
 }

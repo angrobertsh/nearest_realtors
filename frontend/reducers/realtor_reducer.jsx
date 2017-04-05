@@ -1,8 +1,8 @@
 import merge from 'lodash/merge';
 
 const defaultState = {
-  address1: "",
-  address2: "",
+  address1: {},
+  address2: {},
   realtors: {},
   errors: []
 };
@@ -12,8 +12,11 @@ const RealtorReducer = (state = defaultState, action) => {
   let newState = merge({}, state);
 
   switch (action.type){
-    case "UPDATE_ADDRESSES":
-      newState = merge(newState, {address1: action.addresses["address1"], address2: action.addresses["address2"]})
+    case "REDUCE_ADDRESS_1":
+      newState = merge(newState, {address1: action.address1})
+      return newState;
+    case "REDUCE_ADDRESS_2":
+      newState = merge(newState, {address2: action.address2})
       return newState;
     case "RECEIVE_REALTORS":
       newState = merge(newState, {realtors: action.realtors})

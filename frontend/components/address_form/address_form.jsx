@@ -11,6 +11,12 @@ class AddressForm extends React.Component{
     this.update = this.update.bind(this);
   }
 
+  componentWillReceiveProps(nextProps){
+    if(nextProps.address1 !== this.props.address1 && !(Object.keys(nextProps.address1).length === 0 && nextProps.address1.constructor === Object)){
+      this.props.fetchRealtors(nextProps.address1);
+    }
+  }
+
   update(e){
     let stateUpdate = {};
     stateUpdate[e.target.name] = e.target.value;
@@ -19,7 +25,7 @@ class AddressForm extends React.Component{
 
   handleSubmit(e){
     e.preventDefault();
-    Promise.resolve(this.props.updateAddresses(this.state)).then(this.props.fetchRealtors(this.props.address1));
+    this.props.updateAddresses(this.state);
   }
 
   render(){
