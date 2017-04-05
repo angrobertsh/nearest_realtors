@@ -11,10 +11,10 @@ class RealtorIndexItem extends React.Component {
     return (
       <div className="realtor">
         <div className="realtor-name">
-
+          // realtor.name
         </div>
         <div className="realtor-address">
-
+          // realtor.address
         </div>
       </div>
     );

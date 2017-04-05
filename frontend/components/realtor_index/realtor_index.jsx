@@ -16,6 +16,9 @@ class RealtorIndex extends React.Component{
   }
 
   sortRealtors(){
+
+    // sorts this.props.realtors by distance from address1 + distance from address2
+
     return Object.keys(this.props.realtors);
   }
 

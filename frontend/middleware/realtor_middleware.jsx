@@ -13,7 +13,7 @@ const RealtorMiddleware = ({state, dispatch}) => next => action => {
 
   switch (action.type){
     case "FETCH_REALTORS":
-      
+      // ajax to google places API to find all realtors within 10 miles of action.address dispatching to success on success
       return next(action);
     default:
       return next(action);
